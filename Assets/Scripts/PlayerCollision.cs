@@ -10,6 +10,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy") 
             playermovement.enabled = false;
- 
+       // FindObjectOfType<GameOver>().GameEnded();
+
+
     }
 }

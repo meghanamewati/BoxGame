@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,5 +24,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce (- SideMove * Time.deltaTime , 0, 0, ForceMode.VelocityChange);
         }
+
+
+
+        
+       /* if (rb.position.y < -2f) 
+        {
+            Debug.Log("below");
+            FindObjectOfType<GameOver>().GameEnded();
+        }  */
+
+
     }
 }
