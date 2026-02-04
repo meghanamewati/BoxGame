@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{   
+{
+
 
     public GameObject LvlCompScreen;
     public void LevelCompleted()
@@ -11,4 +12,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameManagerEntered");
         LvlCompScreen.SetActive(true);
     }
-}
+
+
+    public GameObject GameOverScreen;
+    public void GameOver()
+    {
+        Debug.Log("GameManagerEntered");
+        GameOverScreen.SetActive(true);
+    }
+
+
+}    

@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
 
-    public PlayerMovement playermovement; 
+    public PlayerMovement playermovement;
+    public GameManager gameManager;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Enemy") 
+        if (collision.collider.tag == "Enemy")
+        {
             playermovement.enabled = false;
-       // FindObjectOfType<GameOver>().GameEnded();
+            gameManager.GameOver();
+        }
+           
 
 
     }

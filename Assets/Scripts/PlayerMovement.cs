@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float Move ;
     public float SideMove ;
+    public GameManager gameManager;
     
     void FixedUpdate()
     {
@@ -24,15 +25,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce (- SideMove * Time.deltaTime , 0, 0, ForceMode.VelocityChange);
         }
-
-
-
         
-       /* if (rb.position.y < -2f) 
+        if (rb.position.y < -2f) 
         {
             Debug.Log("below");
-            FindObjectOfType<GameOver>().GameEnded();
-        }  */
+            gameManager.GameOver();
+        }  
 
 
     }

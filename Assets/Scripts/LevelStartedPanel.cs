@@ -20,6 +20,6 @@ public class LevelStartedPanel : MonoBehaviour
     
     void EndLevelStartPanel()
     {
-        gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }
